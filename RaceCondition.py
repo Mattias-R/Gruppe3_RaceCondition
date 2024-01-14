@@ -1,4 +1,6 @@
 import threading
+import time
+
 
 class BankAccount:
     def __init__(self, balance):
@@ -24,12 +26,12 @@ def withdraw_function(account, amount, times):
         account.withdraw(amount)
 
 # Example Usage
-initial_balance = 100
+initial_balance = 5000
 account = BankAccount(initial_balance)
 
 # Creating threads
-deposit_thread = threading.Thread(target=deposit_function, args=(account, 10, 100))
-withdraw_thread = threading.Thread(target=withdraw_function, args=(account, 10, 100))
+deposit_thread = threading.Thread(target=deposit_function, args=(account, 5, 1000))
+withdraw_thread = threading.Thread(target=withdraw_function, args=(account, 5, 1000))
 
 # Starting threads
 deposit_thread.start()
