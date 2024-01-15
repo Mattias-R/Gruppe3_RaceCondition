@@ -31,8 +31,8 @@ initial_balance = 5000
 account = BankAccount(initial_balance)
 
 # Creating threads
-deposit_thread = threading.Thread(target=deposit_function, args=(account, 5, 1000))
-withdraw_thread = threading.Thread(target=withdraw_function, args=(account, 5, 1000))
+deposit_thread = threading.Thread(target=deposit_function, args=(account, 5, 10))
+withdraw_thread = threading.Thread(target=withdraw_function, args=(account, 5, 10))
 
 # Starting threads
 deposit_thread.start()
